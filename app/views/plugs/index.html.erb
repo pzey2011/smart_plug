@@ -5,6 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Ip</th>
+      <th>User</th>
+      <th>Model</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +17,11 @@
   <tbody>
     <% @plugs.each do |plug| %>
       <tr>
+        <td><%= plug.name %></td>
+        <td><%= plug.status %></td>
+        <td><%= plug.ip %></td>
+        <td><%= plug.user_id %></td>
+        <td><%= plug.model %></td>
         <td><%= link_to 'Show', plug %></td>
         <td><%= link_to 'Edit', edit_plug_path(plug) %></td>
         <td><%= link_to 'Destroy', plug, method: :delete, data: { confirm: 'Are you sure?' } %></td>

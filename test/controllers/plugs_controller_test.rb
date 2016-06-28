@@ -18,7 +18,7 @@ class PlugsControllerTest < ActionController::TestCase
 
   test "should create plug" do
     assert_difference('Plug.count') do
-      post :create, plug: {  }
+      post :create, plug: { ip: @plug.ip, model: @plug.model, name: @plug.name, status: @plug.status, user_id: @plug.user_id }
     end
 
     assert_redirected_to plug_path(assigns(:plug))
@@ -35,7 +35,7 @@ class PlugsControllerTest < ActionController::TestCase
   end
 
   test "should update plug" do
-    patch :update, id: @plug, plug: {  }
+    patch :update, id: @plug, plug: { ip: @plug.ip, model: @plug.model, name: @plug.name, status: @plug.status, user_id: @plug.user_id }
     assert_redirected_to plug_path(assigns(:plug))
   end
 

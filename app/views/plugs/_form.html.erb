@@ -10,19 +10,27 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
-    <%= f.label :plug_name %><br>
-    <%= f.text_field :plug_name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :ip %><br>
+    <%= f.text_field :ip %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

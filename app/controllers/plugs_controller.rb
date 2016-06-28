@@ -1,5 +1,9 @@
 class PlugsController < ApplicationController
-  before_action :set_plug, only: [:show, :edit, :update, :destroy]
+  before_action :set_plug, only: [:show, :edit, :update, :destroy, :fetch]
+
+  def fetch
+    render layout: false
+  end
 
   # GET /plugs
   # GET /plugs.json
@@ -69,6 +73,6 @@ class PlugsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plug_params
-      params.fetch(:plug, {})
+      params.require(:plug).permit(:name, :status, :ip, :user_id, :model)
     end
 end
